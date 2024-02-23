@@ -3,16 +3,13 @@ const ans = document.querySelectorAll(".answer");
 const ques = document.querySelectorAll(".question");
 const box = document.querySelectorAll(".question-box");
 
-// Method-1 #################################################
+// Method-1 (DOM Traversing) #################################################
 
 btn.forEach((button) => {
   button.addEventListener("click", (e) => {
     const text = button.innerHTML;
-    if (text === "↓") {
-      button.innerHTML = "↑";
-    } else {
-      button.innerHTML = "↓";
-    }
+
+    text === "↓" ? (button.innerHTML = "↑") : (button.innerHTML = "↓");
 
     const question_box = e.currentTarget.parentElement.parentElement;
     const answer = question_box.children[1];
@@ -20,7 +17,7 @@ btn.forEach((button) => {
   });
 });
 
-// Method-2 #################################################
+// Method-2 (Using Selectors)#################################################
 
 // box.forEach((box) => {
 //   const button = box.querySelector(".btn");

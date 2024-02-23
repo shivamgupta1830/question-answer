@@ -1,5 +1,3 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"); */
-
 @import url("https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap");
 * {
   margin: 0;
@@ -8,20 +6,20 @@
 }
 
 body {
-  /* font-family: "Roboto", sans-serif; */
   font-family: "Kalam", cursive, sans-serif;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   padding-top: 50px;
-  gap: 30px;
+  gap: 45px;
   background-color: rgb(221, 204, 172);
 }
 
 .question-box {
   width: 65%;
 }
+
 .header {
   text-align: center;
   color: rgb(104, 77, 9);
@@ -41,6 +39,11 @@ body {
 }
 .question-text {
   font-weight: 500;
+  transition: all 0.25s ease-in-out;
+}
+
+.question-text:hover {
+  transform: translateX(8px);
 }
 .btn {
   width: 32px;
@@ -71,8 +74,13 @@ body {
   color: rgb(104, 77, 9);
 }
 .answer-text {
-  width: 100%;
+  display: inline-block;
+
   font-weight: 500;
+  transition: all 0.25s ease-in-out;
+}
+.answer-text:hover {
+  transform: translateX(8px);
 }
 .answer {
   display: none;
